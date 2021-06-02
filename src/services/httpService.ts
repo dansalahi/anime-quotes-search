@@ -2,7 +2,8 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import { apiUrl } from "./../config.json";
 
 export class HttpService {
-  constructor(private client: AxiosInstance) {
+  private client: AxiosInstance;
+  constructor() {
     this.client = axios.create({
       baseURL: apiUrl,
       headers: {},
